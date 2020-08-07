@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignIn</title>
+    <link rel="stylesheet" href="login.component.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="signin">
+        <div class="title">
+            Sign in
+        </div>
+        <div class="form">
+            <div class="inputField">
+                <input type="text" placeholder="Username or email" name="Email" id="email" class="input" required>
+            </div>
+            <div class="inputField">
+                <input type="password" placeholder="Password" name="Password" id="pass" class="input" required> 
+                <span class="eye" onclick="myfunction()">
+                    <i id="hide1" class="fa fa-eye" ></i>
+                    <i id="hide2" class="fa fa-eye-slash"></i>
+                </span>       
+            </div>
+
+            <div class="forgetPass">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="btn">
+                <input type="submit" value="Sign In" class="btn_sign">
+            </div>            
+        </div>
+    </div>
+    <script>
+        function myfunction(){
+            var x = document.getElementById("pass")
+            var y = document.getElementById("hide1")
+            var z = document.getElementById("hide2")
+
+            if(x.type === 'pass'){
+                x.type = "text";
+                y.style.display = "block";
+                z.style.display = "none";
+            } 
+            else{
+                x.type = "pass";
+                y.style.display = "none";
+                z.style.display = "block"; 
+
+            }
+        }
+    </script>
+</body>
+</html>
