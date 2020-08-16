@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Email Verification</title>
+</head>
+<body>
+    <form [formGroup]="verifyForm" (ngSubmit)="verify()">
+        <div class="field">
+            <div class="input">
+               <p>To verify the account enter your registered email and then click on verify button</p>
+           </div>
+           <div class="input">
+            <input type="text" placeholder="Email" name="email" id="email" class="inputfield"required formControlName="email">
+           </div>
+           <div class="btn">
+               <input type="submit" value="Verify" class="btn_field"> 
+           </div>       
+        </div>
+    </form>
+</body>
+</html>
