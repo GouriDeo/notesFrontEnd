@@ -15,5 +15,9 @@ export class HttpRequestService{
         return this._http.post('http://localhost:5050/user/confirmAccount',user)
     }
 
+    login(user:any){
+        return this._http.post('http://localhost:5050/user/login',user)
+    }
+
     
 }

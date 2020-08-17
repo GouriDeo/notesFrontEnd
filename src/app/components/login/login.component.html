@@ -5,31 +5,32 @@
     <link rel="stylesheet" href="login.component.css">
 </head>
 <body>
-    <div class="signin">
-        <div class="title">
-            Sign in
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="signin">
+            <div class="title">
+                Sign in
+            </div>
+            <div class="form">
+                <div class="inputField">
+                    <input type="text" placeholder="Username or email" name="email" class="input" required formControlName="email">
+                </div>
+                <div class="inputField">
+                    <input type="password" placeholder="Password" name="password" class="input" required required formControlName="password">       
+                </div>
+                <div class="forgetPass">
+                    <a [routerLink]="'/forgotpassword'">Forgot password?</a>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="Sign In" class="btn_sign">
+                </div> 
+                <div class="instru">
+                    <p>Don't have an account?</p>
+                </div>
+                <div class="instru1">
+                    <a [routerLink]= "'/register'">Register here</a>
+                </div> 
+            </div>
         </div>
-        <div class="form">
-            <div class="inputField">
-                <input type="text" placeholder="Username or email" name="Email" id="email" class="input" required>
-            </div>
-            <div class="inputField">
-                <input type="password" placeholder="Password" name="Password" id="pass" class="input" required>       
-            </div>
-
-            <div class="forgetPass">
-                <a [routerLink]="'/forgotpassword'">Forgot password?</a>
-            </div>
-            <div class="btn">
-                <input type="submit" value="Sign In" class="btn_sign">
-            </div> 
-            <div class="instru">
-                <p>Don't have an account?</p>
-            </div>
-            <div class="instru1">
-                <a [routerLink]= "'/register'">Register here</a>
-            </div> 
-        </div>
-    </div>
+    </form>
 </body>
 </html>
