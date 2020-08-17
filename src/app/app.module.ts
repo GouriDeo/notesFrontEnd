@@ -8,7 +8,8 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
-import { UserVerificationComponent } from './components/user-verification/user-verification.component'
+import { UserVerificationComponent } from './components/user-verification/user-verification.component';
+import { UpdatePasswordComponent } from './components/update-password/update-password.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { UserVerificationComponent } from './components/user-verification/user-v
     RegistrationComponent,
     LoginComponent,
     ForgotPasswordComponent,
-    UserVerificationComponent
+    UserVerificationComponent,
+    UpdatePasswordComponent
   ],
   imports: [
     BrowserModule,
