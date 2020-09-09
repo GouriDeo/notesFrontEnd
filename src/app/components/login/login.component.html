@@ -15,7 +15,7 @@
                     <input type="text" placeholder="Username or email" name="email" class="input" required formControlName="email">
                 </div>
                 <div class="inputField">
-                    <input type="password" placeholder="Password" name="password" class="input" required required formControlName="password">       
+                    <input type="password" placeholder="Password" name="password" class="input" required formControlName="password">       
                 </div>
                 <div class="forgetPass">
                     <a [routerLink]="'/forgotpassword'">Forgot password?</a>
@@ -23,6 +23,14 @@
                 <div class="btn">
                     <input type="submit" value="Sign In" class="btn_sign">
                 </div> 
+                <div align = "center">
+                    <button type="button" (click)="signInWithGoogle()" style="border: none; background: none; padding: none;">
+                        <img src="../../../assets/logo.png" style="width: 50px; height: 50px;">
+                    </button>
+                    <button type="button" (click)="signInWithFB()" style="border: none; background: none; padding: none;">
+                        <img src="../../../assets/facebook-new.png" style="width: 50px; height: 50px;">
+                    </button> 
+                </div>
                 <div class="instru">
                     <p>Don't have an account?</p>
                 </div>

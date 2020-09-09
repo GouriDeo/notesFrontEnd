@@ -5,14 +5,15 @@ import {RegistrationComponent} from './components/registration/registration.comp
 import {ForgotPasswordComponent } from './components/forgot-password/forgot-password.component'
 import {UserVerificationComponent } from './components/user-verification/user-verification.component'
 import {UpdatePasswordComponent} from './components/update-password/update-password.component'
-
+import {DashBoardComponent} from './components/dash-board/dash-board.component'
 const routes: Routes = [
   {path:'',redirectTo:'login', pathMatch:'full'},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegistrationComponent},
   {path:'forgotpassword',component:ForgotPasswordComponent},
   {path:'verify/:token',component:UserVerificationComponent},
-  {path:'updatepassword/:token',component:UpdatePasswordComponent}
+  {path:'updatepassword/:token',component:UpdatePasswordComponent},
+  {path:'dashboard',component:DashBoardComponent}
 ];
 
 @NgModule({

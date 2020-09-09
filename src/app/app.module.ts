@@ -10,7 +10,12 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { UserVerificationComponent } from './components/user-verification/user-verification.component';
 import { UpdatePasswordComponent } from './components/update-password/update-password.component';
-
+import { DashBoardComponent } from './components/dash-board/dash-board.component';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import {GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.component';
+import { SideNavTogglerComponent } from './components/side-nav-toggler/side-nav-toggler.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +24,11 @@ import { UpdatePasswordComponent } from './components/update-password/update-pas
     LoginComponent,
     ForgotPasswordComponent,
     UserVerificationComponent,
-    UpdatePasswordComponent
+    UpdatePasswordComponent,
+    DashBoardComponent,
+    NavbarComponent,
+    SidenavbarComponent,
+    SideNavTogglerComponent
   ],
   imports: [
     BrowserModule,
@@ -28,9 +37,31 @@ import { UpdatePasswordComponent } from './components/update-password/update-pas
     CommonModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocialLoginModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              '847049766532-njoeisbjrrchchn3iru99hfmtnhakfb4.apps.googleusercontent.com'
+            ),
+          },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider(
+              '847049766532-tl5t46om82cs0reoipujkaqsc4b0e847.apps.googleusercontent.com'
+            ),
+          }
+        ],
+      } as SocialAuthServiceConfig,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
