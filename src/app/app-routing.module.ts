@@ -6,6 +6,9 @@ import {ForgotPasswordComponent } from './components/forgot-password/forgot-pass
 import {UserVerificationComponent } from './components/user-verification/user-verification.component'
 import {UpdatePasswordComponent} from './components/update-password/update-password.component'
 import {DashBoardComponent} from './components/dash-board/dash-board.component'
+import {NavbarComponent} from './components/navbar/navbar.component'
+import {AddNoteComponent} from './components/add-note/add-note.component'
+
 const routes: Routes = [
   {path:'',redirectTo:'login', pathMatch:'full'},
   {path:'login',component:LoginComponent},
@@ -13,7 +16,10 @@ const routes: Routes = [
   {path:'forgotpassword',component:ForgotPasswordComponent},
   {path:'verify/:token',component:UserVerificationComponent},
   {path:'updatepassword/:token',component:UpdatePasswordComponent},
-  {path:'dashboard',component:DashBoardComponent}
+  {path:'dashboard',component:DashBoardComponent},
+  {path:'Navbar',component:NavbarComponent},
+  {path:'addNote',component:AddNoteComponent}
+
 ];
 
 @NgModule({

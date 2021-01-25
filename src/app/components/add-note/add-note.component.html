@@ -1,0 +1,18 @@
+<form [formGroup]="noteForm" (ngSubmit)="addNote()">
+<div class="note">
+    <div class="title">
+        Add Note
+    </div>
+    <div class="form">
+        <div class="inputField">
+            <input type="text" placeholder="Title" name="title" class="input" required formControlName="title">
+        </div>
+        <div class="inputField">
+            <input type="text" placeholder="Content" name="content" class="input" required formControlName="content">       
+        </div>
+        <div class="btn">
+            <input type="submit" value="Add" class="btn_sign">
+        </div> 
+    </div>
+</div>        
+</form>

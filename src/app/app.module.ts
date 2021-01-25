@@ -4,9 +4,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { RegistrationComponent } from './components/registration/registration.component';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { UserVerificationComponent } from './components/user-verification/user-verification.component';
 import { UpdatePasswordComponent } from './components/update-password/update-password.component';
@@ -16,6 +18,7 @@ import {GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.component';
 import { SideNavTogglerComponent } from './components/side-nav-toggler/side-nav-toggler.component';
+import { AddNoteComponent } from './components/add-note/add-note.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { SideNavTogglerComponent } from './components/side-nav-toggler/side-nav-
     DashBoardComponent,
     NavbarComponent,
     SidenavbarComponent,
-    SideNavTogglerComponent
+    SideNavTogglerComponent,
+    AddNoteComponent
   ],
   imports: [
     BrowserModule,

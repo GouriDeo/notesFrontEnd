@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    {
+      let token = localStorage.getItem('loginToken')
+      let decodedUserDetails = jwt_decode(token)
+      console.log(decodedUserDetails)
+     }
+  
+  }
 
   ngOnInit(): void {
   }
