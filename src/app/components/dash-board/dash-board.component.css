@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box1{
+    background-color: aqua;
+}
+.box2{
+    
+    background-color: rgb(37, 121, 93);
+}
+.box3{
+    background-color: rgb(119, 132, 206);
+}
+.box4{
+    background-color: rgb(189, 115, 183);z-index: -2;
+}
+
+.box5{
+    background-color: rgb(168, 184, 30);
+    
+}
+.box6{
+    background-color: rgb(43, 58, 139);
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    grid-template-rows: 60px 1fr;
+}
+
+.box4{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 1fr;
+}
+

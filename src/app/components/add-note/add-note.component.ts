@@ -1,10 +1,9 @@
-import { APP_ID, Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms'
 import {HttpRequestService} from '../../services/note.service'
 import { Router } from '@angular/router';
 import * as jwt_decode from 'jwt-decode';
 import { __importDefault } from 'tslib';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-note',
@@ -13,12 +12,9 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 })
 export class AddNoteComponent implements OnInit {
   noteForm: FormGroup;
+  @Input() showMenu;
   constructor(private fb:FormBuilder, private service:HttpRequestService, private router:Router) {
-    let token = localStorage.getItem('loginToken')
-    let decodedUserDetails = jwt_decode(token)
-    console.log(decodedUserDetails)
-    let userid = decodedUserDetails._id;
-    console.log(userid)
+
   }
 
   ngOnInit(): void {
@@ -26,7 +22,6 @@ export class AddNoteComponent implements OnInit {
       title: ['', Validators.required],
       content: ['', Validators.required]
     })
-
   }
 
   get title(){

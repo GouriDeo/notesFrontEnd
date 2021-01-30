@@ -1,18 +1,17 @@
-<form [formGroup]="noteForm" (ngSubmit)="addNote()">
-<div class="note">
-    <div class="title">
-        Add Note
-    </div>
-    <div class="form">
-        <div class="inputField">
-            <input type="text" placeholder="Title" name="title" class="input" required formControlName="title">
-        </div>
-        <div class="inputField">
-            <input type="text" placeholder="Content" name="content" class="input" required formControlName="content">       
-        </div>
-        <div class="btn">
-            <input type="submit" value="Add" class="btn_sign">
-        </div> 
-    </div>
-</div>        
-</form>
+
+<div class="outer-main-container">
+  <div class="add-note">
+      <div class="card w-75">
+          <div class="card-body">
+            <h5 class="card-title">
+                <input type="text" placeholder="Title" name="title" class="input" required>
+              </h5>
+            <p class="card-text">
+                <input type="text" placeholder="Text" name="text" class="input
+                " required>
+            </p>
+            <a href="#" class="btn btn-primary">Add</a>
+          </div>
+      </div>
+  </div>
+</div>

@@ -12,7 +12,9 @@ import { Router } from '@angular/router';
 })
 export class DashBoardComponent implements OnInit {
   
-  constructor(private fb:FormBuilder, private service:HttpRequestService, private router:Router) {
+  showMenu : Boolean = false;
+  changegrid : Boolean = false;
+  constructor(private fb:FormBuilder, private service:HttpRequestService, private router:Router,) {
     let token = localStorage.getItem('loginToken')
     let decodedUserDetails = jwt_decode(token)
     console.log(decodedUserDetails)
@@ -20,6 +22,12 @@ export class DashBoardComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+  toggleMenu(){
+    this.showMenu = !this.showMenu;
+  }
 
- 
+  grid(){
+    this.changegrid = !this.changegrid;
+  }
 }

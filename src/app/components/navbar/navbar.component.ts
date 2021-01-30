@@ -8,6 +8,7 @@ import * as jwt_decode from 'jwt-decode';
 })
 export class NavbarComponent implements OnInit {
 
+  showMenu : Boolean = false;
   constructor() { 
     {
       let token = localStorage.getItem('loginToken')
@@ -20,4 +21,7 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleMenu(){
+    this.showMenu = !this.showMenu;
+  }
 }

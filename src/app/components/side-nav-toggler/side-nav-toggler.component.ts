@@ -11,5 +11,5 @@ export class SideNavTogglerComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }

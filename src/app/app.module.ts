@@ -19,6 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavbarComponent } from './components/sidenavbar/sidenavbar.component';
 import { SideNavTogglerComponent } from './components/side-nav-toggler/side-nav-toggler.component';
 import { AddNoteComponent } from './components/add-note/add-note.component';
+import { CardsComponent } from './components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AddNoteComponent } from './components/add-note/add-note.component';
     NavbarComponent,
     SidenavbarComponent,
     SideNavTogglerComponent,
-    AddNoteComponent
+    AddNoteComponent,
+    CardsComponent,
   ],
   imports: [
     BrowserModule,

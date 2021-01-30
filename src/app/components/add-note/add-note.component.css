@@ -1,0 +1,27 @@
+
+.outer-main-container{
+    margin:auto;
+    width: 600px;
+    margin-top: 15px;
+}
+
+.card-body{
+    padding: 0%;
+}
+.card-title .input{
+    width: 100%;
+}
+
+.card-text .input{
+    width: 100%;
+    
+}
+p{
+    margin-bottom: 5px;
+}
+
+a{
+   float: right;
+   margin-right: 13px;
+   margin-bottom: 5px;
+}
